@@ -7,7 +7,7 @@ require_once __DIR__.'/vendor/autoload.php';
 
 $transport = new Swift_SmtpTransport('smtp.gmail.com',465,'ssl');
 $transport->setUsername("noeldamps1@gmail.com");
-$transport->setPassword("oqcpsqlbeypgfhwf")
+$transport->setPassword("oqcpsqlbeypgfhwf");
 
 $mailer = new Swift_Mailer($transport);
 
