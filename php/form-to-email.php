@@ -23,7 +23,7 @@ $message->setBody( $_POST['message']);
 $result = $mailer->send($message);
 
 //Redirect to Homepage
-header("Location:".$_SERVER[HTTP_REFERER]);
+header("Location: ../index.html");
 exit();
 
 ?>
