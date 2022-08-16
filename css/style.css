@@ -813,10 +813,10 @@ section {
 }
 
 #thank-you-message {
-  display: none !important;
+  display: none;
 }
 
-#thank-you-message {
+#thank-you-message.show {
   display: block;
 }
 
