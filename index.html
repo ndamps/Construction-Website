@@ -454,12 +454,12 @@
 
       <iframe class="map" src="https://maps.google.com/maps?q=Varensellerstr.%2053,%2033378%20Rheda-Wiedenbr%C3%BCck&t=&z=13&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy"></iframe>
 
-      <form action="">
+      <form action="php/form-to-email.php" method="post">
          <h3>Kontaktformular</h3>
-         <input type="text" placeholder="Name" class="box">
-         <input type="email" placeholder="Email" class="box">
-         <input type="number" placeholder="Telefonnummer" class="box">
-         <textarea name="" placeholder="Ihre Nachricht" class="box" id="" cols="30" rows="10"></textarea>
+         <input name="name" type="text" placeholder="Name" class="box">
+         <input name="email" type="email" placeholder="Email" class="box">
+         <input name="phone" type="number" placeholder="Telefonnummer" class="box">
+         <textarea name="message" placeholder="Ihre Nachricht" class="box" id="" cols="30" rows="10"></textarea>
          <input type="submit" value="Nachricht senden" class="btn">
       </form>
 
