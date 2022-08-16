@@ -17,7 +17,7 @@ $mailer = new Swift_Mailer($transport);
 $message = new Swift_Message("Neue Nachricht von ".$_POST['name']);
 $message->setFrom([$_POST['email']]);
 $message->setTo(['noeldamps@icloud.com']);
-$message->setBody($_POST['message'].\n."Kontaktdaten:".\n."Telefonnummer: ".$_POST['phone']);
+$message->setBody($_POST['message']."\nKontaktdaten:\nTelefonnummer: ".$_POST['phone']."\nEmail-Adresse: ".$_POST['email']);
 
 //Send Email
 $result = $mailer->send($message);
