@@ -818,6 +818,11 @@ section {
 
 #thank-you-message.show {
   display: block;
+  color: green;
+}
+
+#contactForms.hide {
+  display: none;
 }
 
 .blogs {

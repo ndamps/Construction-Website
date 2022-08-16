@@ -2,9 +2,11 @@ let navbar = document.querySelector('.header .navbar');
 let contactInfo = document.querySelector('.contact-info');
 const form = document.querySelector('form');
 const thankYouMessage = document.querySelector('#thank-you-message');
+const contactForms    = document.querySelector('#contact-forms');
 form.addEventListener('submit', (e) => {
    e.preventDefault();
    thankYouMessage.classList.add('show');
+   contactForms.classList.add('hide');
    setTimeout(() => form.submit(), 2000);
 });
 
