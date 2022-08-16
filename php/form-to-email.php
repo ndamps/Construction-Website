@@ -11,3 +11,5 @@ $header = "Neue Nachricht von $name";
 
 // Send Email
 mail($to,$email_subject,$email_body,$header)
+
+?>
