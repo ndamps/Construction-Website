@@ -812,6 +812,14 @@ section {
   resize: none;
 }
 
+#thank-you-message {
+  display: none;
+}
+
+#thank-you-message {
+  display: block;
+}
+
 .blogs {
   background: var(--light-bg);
 }

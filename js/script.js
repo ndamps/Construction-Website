@@ -1,5 +1,13 @@
 let navbar = document.querySelector('.header .navbar');
 let contactInfo = document.querySelector('.contact-info');
+const form = document.querySelector('form');
+const thankYouMessage = document.querySelector('#thank-you-message');
+form.addEventListener('submit', (e) => {
+   e.preventDefault();
+   thankYouMessage.classList.add('show');
+   setTimeout(() => form.submit(), 2000);
+});
+
 
 document.querySelector('#menu-btn').onclick = () =>{
    navbar.classList.toggle('active');
