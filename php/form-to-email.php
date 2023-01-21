@@ -23,7 +23,7 @@ $message->setBody($_POST['message']."\n\nKontaktdaten:\nTelefonnummer: ".$_POST[
 $result = $mailer->send($message);
 
 //Redirect to Homepage
-header("Location: ../index.htmll#contact");
+header("Location: ../index.html#contact");
 exit();
 
 ?>
