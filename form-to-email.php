@@ -3,7 +3,7 @@
 error_reporting(E_ALL);
 ini_set('display_errors','On');
 
-require_once '../vendor/autoload.php';
+require_once 'vendor/autoload.php';
 
 //Setup SMTP Gateway
 $transport = new Swift_SmtpTransport('smtp.gmail.com',465,'ssl');
