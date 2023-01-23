@@ -295,7 +295,35 @@
 
       <iframe class="map" src="https://maps.google.com/maps?q=Varensellerstr.%2053,%2033378%20Rheda-Wiedenbr%C3%BCck&t=&z=13&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy"></iframe>
       
-      <form action="/form-to-email.php" method="post">
+      <form action="<?php
+
+error_reporting(E_ALL);
+ini_set('display_errors','On');
+
+require_once '../vendor/autoload.php';
+
+//Setup SMTP Gateway
+$transport = new Swift_SmtpTransport('smtp.gmail.com',465,'ssl');
+$transport->setUsername("noeldamps1@gmail.com");
+$transport->setPassword("oqcpsqlbeypgfhwf");
+
+//Init Mail-Object
+$mailer = new Swift_Mailer($transport);
+
+//Build Email
+$message = new Swift_Message("Neue Nachricht von ".$_POST['name']);
+$message->setFrom([$_POST['email']]);
+$message->setTo(['frankdamps@gmx.de']);
+$message->setBody($_POST['message']."\n\nKontaktdaten:\nTelefonnummer: ".$_POST['phone']."\nEmail-Adresse: ".$_POST['email']);
+
+//Send Email
+$result = $mailer->send($message);
+
+//Redirect to Homepage
+header("Location: ../index.html");
+exit();
+
+?>" method="post">
          <h3 id="thank-you-message">Vielen Dank für Ihre Nachricht!</h3>
          <h3 id="contact-forms">Kontaktformular</h3>
          <input required name="name" type="text" placeholder="Name" class="box">
