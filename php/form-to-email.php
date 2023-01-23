@@ -16,14 +16,14 @@ $mailer = new Swift_Mailer($transport);
 //Build Email
 $message = new Swift_Message("Neue Nachricht von ".$_POST['name']);
 $message->setFrom([$_POST['email']]);
-$message->setTo(['frankdamps@gmx.de']);
+$message->setTo(['noeldamps@icloud.com']);
 $message->setBody($_POST['message']."\n\nKontaktdaten:\nTelefonnummer: ".$_POST['phone']."\nEmail-Adresse: ".$_POST['email']);
 
 //Send Email
 $result = $mailer->send($message);
 
 //Redirect to Homepage
-header("Location: ../index.html");
+header("Location: ../index.htmll#contact");
 exit();
 
 ?>
